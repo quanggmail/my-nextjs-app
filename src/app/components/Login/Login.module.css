@@ -1,0 +1,88 @@
+/* General Form Styling */
+.container { /* Changed 'div' to '.container' */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+.form { /* Changed 'form' to '.form' */
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Error Message Styling */
+.error { /* Added '.error' class */
+  color: #d9534f;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Input Group Styling */
+.inputGroup { /* Changed 'form div' to '.inputGroup' */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Label Styling */
+.label { /* Added '.label' class */
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Input Field Styling */
+.inputField { /* Combined input types into '.inputField' */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Submit Button Styling */
+.submitButtonContainer { /* Added a container for the submit button if needed for layout */
+    /* You might not need specific styles here, but it helps for structure */
+}
+
+.submitButton { /* Changed 'input[type="submit"]' to '.submitButton' */
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments (Optional) */
+@media (max-width: 600px) {
+  .form {
+    padding: 30px;
+    margin: 20px;
+  }
+}

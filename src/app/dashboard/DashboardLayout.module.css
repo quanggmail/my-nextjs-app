@@ -1,0 +1,122 @@
+/* src/components/DashboardLayout/DashboardLayout.module.css */
+
+/* Overall container for the dashboard layout */
+.dashboardContainer {
+    display: flex; /* Use flexbox to arrange side menu and main content */
+    flex-direction: column; /* <--- IMPORTANT CHANGE: Stack children vertically */
+    min-height: 100vh; /* Make sure the container takes at least full viewport height */
+    font-family: Arial, sans-serif; /* Basic font */
+    background-color: #f0f2f5; /* Light background for the whole dashboard */
+}
+
+/* Styles for the header containing the breadcrumb */
+.header {
+    background-color: #ffffff; /* White background for the header */
+    padding: 15px 20px; /* Some padding */
+    border-bottom: 1px solid #e0e0e0; /* Subtle bottom border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Very light shadow */
+    grid-area: header; /* For grid layout (if you decide to use it later) */
+    position: sticky; /* Make it stick to the top */
+    top: 0;
+    z-index: 100; /* Ensure it stays on top of other content */
+}
+
+/* Area containing both side menu and main content */
+.mainContentArea {
+    display: flex; /* Arrange side menu and content horizontally */
+    flex: 1; /* Allow this area to take up remaining space */
+}
+
+/* Styles for the SideMenu container */
+.sideMenu {
+    width: 250px; /* Fixed width for the side menu */
+    background-color: #334155; /* Darker background for the sidebar (e.g., slate-800) */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Vertical padding, no horizontal padding as content inside will manage it */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow to separate it from content */
+    flex-shrink: 0; /* Prevent the side menu from shrinking */
+    overflow-y: auto; /* Enable scrolling if menu content is too long */
+    /* If you want it to be sticky, you might need a different layout approach (e.g., grid or fixed positioning) */
+}
+
+/* Styles for the main content area where pages will render */
+.content {
+    flex-grow: 1; /* Allows the content area to take up all available remaining space */
+    padding: 20px; /* Padding around the content */
+    background-color: #ffffff; /* White background for the main content area */
+    margin: 20px; /* Margin to create a card-like effect for the content */
+    border-radius: 8px; /* Rounded corners for the content area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow for content card */
+    overflow-y: auto; /* Enable scrolling if content is too long */
+}
+
+/* --- Basic styles for the Breadcrumb component itself (if it's a simple list) --- */
+/* You might put these inside Breadcrumb.module.css instead */
+/* This is just for demonstration if you haven't styled Breadcrumb yet */
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li {
+    display: inline-flex; /* Use inline-flex for alignment */
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/'; /* Separator between items */
+    margin: 0 8px;
+    color: #aaa;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #0070f3; /* Link color */
+    transition: color 0.2s ease;
+}
+
+.breadcrumb li a:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+.breadcrumb li:last-child {
+    color: #333; /* Current page text color */
+    font-weight: bold;
+}
+
+/* --- Basic styles for the SideMenu component itself (if it's a simple list) --- */
+/* You would put these inside SideMenu.module.css */
+/* This is just for demonstration if you haven't styled SideMenu yet */
+.menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuItem {
+    margin-bottom: 5px;
+}
+
+.menuLink {
+    display: block; /* Make the whole area clickable */
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menuLink:hover {
+    background-color: #475569; /* Slightly lighter gray on hover */
+    color: #ffffff;
+}
+
+.menuLink.active { /* For the currently active menu item */
+    background-color: #0070f3; /* Highlight active link with blue */
+    font-weight: bold;
+}
