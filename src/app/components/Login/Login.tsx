@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from './Login.module.css';
 import {useAuth} from '../../../contexts/AuthContext';
+import { useEffect } from "react";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -13,6 +14,14 @@ const Login = () => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const router = useRouter();
+    const {user, isAuthenticate, isLoading, signIn, logout} = useAuth();
+    useEffect(
+        () => {
+            if (isAuthenticate) {
+                router.replace('/dashboard');
+            }
+        }, [isAuthenticate]
+    );
     const handleOnChangeUsername = (e) => {
         setUsername(e.target.value);
     }

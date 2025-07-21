@@ -19,6 +19,32 @@
     position: sticky; /* Make it stick to the top */
     top: 0;
     z-index: 100; /* Ensure it stays on top of other content */
+    display: flex;
+    justify-content: space-between; /* This pushes the first item to left, last to right */
+    align-items: center; /* Vertically centers items */
+    gap: 20px; /* Optional: Add some space between items if they get too close */
+}
+
+/* NEW: Styles for the Logout button container/button */
+.logoutContainer {
+    /* No specific styles needed here if it's just a button */
+    /* If you have user info next to it, you might use flex here */
+}
+
+.logoutButton {
+    background-color: #dc3545; /* Red background for logout */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.logoutButton:hover {
+    background-color: #c82333; /* Darker red on hover */
 }
 
 /* Area containing both side menu and main content */

@@ -8,12 +8,12 @@ const DashboardContent = () => {
   const router = useRouter();
   useEffect( () => {
     console.log('Auth Check: loading', loading, 'isAuthenticate', isAuthenticate, 'user', user); // Add console logs for debugging
-    
+    console.log('!isAuthenticate && !loading', !isAuthenticate && !loading);
     if(!isAuthenticate && !loading) {
-      router.push('/');
+      router.replace('/'); 
     }
   }
-    , [isAuthenticate]);
+    , [isAuthenticate, loading, router]);
 
     return (
         <div>
