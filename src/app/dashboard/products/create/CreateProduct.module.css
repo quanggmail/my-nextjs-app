@@ -1,0 +1,111 @@
+/* src/app/dashboard/products/create/CreateProduct.module.css */
+
+.createProductPage {
+    padding: 20px; /* Padding around the entire create product page */
+    background-color: #ffffff; /* White background for the form area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    max-width: 800px; /* Limit width for better readability on large screens */
+    margin: 20px auto; /* Center the form and add vertical margin */
+}
+
+.formTitle {
+    font-size: 2em; /* Larger title for the form */
+    color: #333;
+    margin-bottom: 30px; /* Space below the title */
+    text-align: center; /* Center the title */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0; /* Separator line */
+}
+
+.form {
+    display: flex;
+    flex-direction: column; /* Stack form groups vertically */
+    gap: 20px; /* Space between form groups */
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.formGroup label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: 600; /* Slightly bolder labels */
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="number"],
+.formGroup textarea,
+.formGroup select {
+    width: 100%; /* Full width within its container */
+    padding: 12px 15px; /* Comfortable padding */
+    border: 1px solid #d1d5db; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formGroup input[type="text"]:focus,
+.formGroup input[type="number"]:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #0070f3; /* Blue border on focus */
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.25); /* Subtle blue glow on focus */
+}
+
+.formGroup textarea {
+    min-height: 100px; /* Minimum height for textareas */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.submitButton {
+    background-color: #0070f3; /* Blue, consistent with other primary actions */
+    color: white;
+    padding: 15px 25px; /* Larger padding for a prominent button */
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 112, 243, 0.2); /* Soft shadow */
+    align-self: flex-end; /* Align button to the right within the flex column */
+    margin-top: 20px; /* Space above the button */
+}
+
+.submitButton:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    box-shadow: 0 6px 15px rgba(0, 112, 243, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .createProductPage {
+        margin: 10px; /* Reduce margin on smaller screens */
+        padding: 15px;
+    }
+
+    .formTitle {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+
+    .formGroup input[type="text"],
+    .formGroup input[type="number"],
+    .formGroup textarea,
+    .formGroup select {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .submitButton {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
