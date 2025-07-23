@@ -121,28 +121,40 @@
 /* This is just for demonstration if you haven't styled SideMenu yet */
 .menuList {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 .menuItem {
-    margin-bottom: 5px;
+    margin-bottom: 0; /* Remove default margin-bottom to control spacing via padding */
 }
 
 .menuLink {
-    display: block; /* Make the whole area clickable */
-    padding: 10px 20px;
-    color: #ffffff;
+    display: flex; /* Use flexbox for alignment of text and potential icon */
+    align-items: center; /* Vertically align content */
+    padding: 12px 20px; /* Increase vertical padding for more space */
+    color: #e2e8f0; /* Lighter text color for better contrast on dark background (e.g., slate-200) */
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 1rem; /* Standard font size */
+    font-weight: 500; /* Slightly bolder font weight */
 }
 
 .menuLink:hover {
-    background-color: #475569; /* Slightly lighter gray on hover */
-    color: #ffffff;
+    background-color: #475569; /* Slightly lighter gray on hover (slate-700) */
+    color: #ffffff; /* Keep text white on hover */
 }
 
 .menuLink.active { /* For the currently active menu item */
-    background-color: #0070f3; /* Highlight active link with blue */
-    font-weight: bold;
+    background-color: #0070f3; /* Highlight active link with a distinct blue */
+    color: #ffffff; /* Ensure text is white on active background */
+    font-weight: bold; /* Make active link text bold */
+    border-left: 4px solid #ffffff; /* Add a distinct border on the left for active state */
+    padding-left: 16px; /* Adjust padding due to border */
 }
+
+/* You might want to add icons later, consider styles for them here */
+/* .menuLink svg {
+    margin-right: 10px;
+    font-size: 1.2em;
+} */

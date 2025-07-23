@@ -1,0 +1,105 @@
+/* src/app/dashboard/products/Products.module.css */
+
+.productsPage {
+    padding: 20px; /* Internal padding for the product list page */
+}
+
+.productsHeader {
+    display: flex;
+    justify-content: space-between; /* Pushes title to left, button to right */
+    align-items: center; /* Vertically aligns items */
+    margin-bottom: 25px; /* Space below the header */
+    padding-bottom: 15px; /* Padding for the bottom of the header */
+    border-bottom: 1px solid #e0e0e0; /* Separator line */
+}
+
+.productsTitle {
+    font-size: 1.8em; /* Larger font size for the title */
+    color: #333; /* Darker color for the title */
+    margin: 0; /* Remove default margin from h2 */
+}
+
+.createButton {
+    background-color: #0070f3; /* Blue, consistent with active sidebar link */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px; /* Slightly more rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    font-weight: bold;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 112, 243, 0.2); /* Subtle shadow for button */
+}
+
+.createButton:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    box-shadow: 0 4px 10px rgba(0, 112, 243, 0.3);
+}
+
+.tableContainer {
+    overflow-x: auto; /* Allows horizontal scrolling for wide tables on small screens */
+    margin-top: 20px; /* Space above the table */
+    border-radius: 8px; /* Rounded corners for the table container */
+    overflow: hidden; /* Ensures child elements respect border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for the table */
+}
+
+.productsTable {
+    width: 100%; /* Table takes full width of its container */
+    border-collapse: collapse; /* Collapses borders between cells */
+    min-width: 600px; /* Minimum width to prevent content crunching */
+}
+
+.productsTable th,
+.productsTable td {
+    padding: 14px 18px; /* More padding for cells */
+    text-align: left;
+    border-bottom: 1px solid #e9ecef; /* Lighter border for rows */
+}
+
+.productsTable th {
+    background-color: #f8f9fa; /* Light grey background for header */
+    color: #495057; /* Darker text for header */
+    font-weight: 600; /* Slightly bolder font for headers */
+    text-transform: uppercase; /* Uppercase header text */
+    font-size: 0.9em;
+}
+
+.productsTable tbody tr:hover {
+    background-color: #f2f2f2; /* Light background on row hover */
+}
+
+/* Action buttons within table cells */
+.actionButton {
+    background-color: #6c757d; /* Grey default for actions */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-right: 8px; /* Space between buttons */
+    transition: background-color 0.2s ease;
+}
+
+.actionButton:hover {
+    background-color: #5a6268;
+}
+
+.editButton {
+    background-color: #007bff; /* Blue for edit */
+}
+
+.editButton:hover {
+    background-color: #0056b3;
+}
+
+.deleteButton {
+    background-color: #dc3545; /* Red for delete */
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
